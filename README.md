@@ -14,8 +14,8 @@ editing a filter input in a TextBox.
 
 ## References
 
-..* System.Windows.Forms
-..* System.Reflection
+* System.Windows.Forms
+* System.Reflection
 
 
 ## Implementation
