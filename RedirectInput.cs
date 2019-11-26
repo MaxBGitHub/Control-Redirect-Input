@@ -7,7 +7,7 @@ void Control_RedirectKey_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e
 	// by the ProcessDataGridViewKey method.
 	// Use e.KeyCode if you wish to ignore Control keys.
 	KeyEventArgs kevent = new KeyEventArgs(e.KeyData);
-	dataGridView1 .GetType()
+	dataGridView1.GetType()
 		.GetMethod("ProcessDataGridViewKey",
 			BindingFlags.NonPublic
 			| BindingFlags.Instance)
@@ -24,8 +24,8 @@ void Control_RedirectScroll_MouseWheel(object sender, MouseEventArgs e)
 	// VerticalOffset property of DataGridView which has private setter;
 	var vOffsProp = dataGridView1.GetType()
 		.GetProperty("VerticalOffset", 
-			System.Reflection.BindingFlags.NonPublic
-			| System.Reflection.BindingFlags.Instance);
+			BindingFlags.NonPublic
+			| BindingFlags.Instance);
 
 	// New offset value
 	int offset = dataGridView1.VerticalScrollingOffset + (e.Delta * -1);
